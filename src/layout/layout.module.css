@@ -1,0 +1,10 @@
+.container {
+
+}
+
+#main {
+  display: block;
+  position: fixed;
+  margin-top: calc(5.2rem + 2rem);
+  margin-left: calc(12rem + 2rem);
+}

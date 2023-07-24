@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AppProvider from "./providers/App";
+import { Reset } from "styled-reset";
+import GlobalStyle from "./GlobalStyle";
+import Layout from "./layout/Layout";
+import Dashboard from "./pages/dashboard/Dashboard";
+import LoginPage from "./pages/login/LoginPage";
+import Introduce from "./pages/introduce/Introduce";
+import Project from "./pages/project/Project";
+import Post from "./pages/post/Post";
+
+const routesConfig = [
+  {
+    path: "/login",
+    element: <LoginPage />
+  },
+  {
+    path: "/logout",
+    element: <LoginPage />
+  },
+  {
+    element: <Layout />,
+    children: [
+      { path: "/", element: <Dashboard /> },
+      { path: "/dashboard", element: <Dashboard /> },
+      { path: "/introduce", element: <Introduce /> },
+      { path: "/project", element: <Project /> },
+      { path: "/post", element: <Post /> },
+    ]
+  }
+]
 
 function App() {
+  const router = createBrowserRouter(routesConfig);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppProvider>
+      <Reset />
+      <GlobalStyle />
+      <RouterProvider router={router} />
+    </AppProvider>
   );
 }
 
