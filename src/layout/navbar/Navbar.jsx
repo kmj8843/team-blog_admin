@@ -25,6 +25,10 @@ const NavBar = () => {
           <PostAddIcon />
           <h3>Post</h3>
         </a>
+        <a href="/guide" className={styles.link}>
+          <PostAddIcon />
+          <h3>Guide</h3>
+        </a>
         <a href="/logout" className={styles.link}>
           <LogoutIcon />
           <h3>Logout</h3>

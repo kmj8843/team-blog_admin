@@ -5,6 +5,8 @@
 #main {
   display: block;
   position: fixed;
-  margin-top: calc(5.2rem + 2rem);
+  margin-top: calc(5.2rem);
   margin-left: calc(12rem + 2rem);
+  width: calc(100vw - 4rem - 2rem - 12rem);
+  height: 100vh;
 }

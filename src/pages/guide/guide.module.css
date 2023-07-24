@@ -1,0 +1,23 @@
+.box {
+  width: 100%;
+  min-height: 15rem;
+  padding: 2rem;
+  border-radius: var(--border-radius-1);
+  background-color: var(--color-white);
+}
+
+.box h2 {
+  margin-bottom: 2rem;
+}
+
+.input-guide {
+  height: 100%;
+}
+
+.input-guide div {
+  margin-bottom: 2rem;
+}
+
+.input-guide div h3 {
+  margin-bottom: 1.5rem;
+}

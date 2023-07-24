@@ -8,6 +8,7 @@ import LoginPage from "./pages/login/LoginPage";
 import Introduce from "./pages/introduce/Introduce";
 import Project from "./pages/project/Project";
 import Post from "./pages/post/Post";
+import Guide from "./pages/guide/Guide";
 
 const routesConfig = [
   {
@@ -26,6 +27,7 @@ const routesConfig = [
       { path: "/introduce", element: <Introduce /> },
       { path: "/project", element: <Project /> },
       { path: "/post", element: <Post /> },
+      { path: "/guide", element: <Guide /> },
     ]
   }
 ]
